@@ -1,0 +1,250 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.content{
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+p{
+    margin: 0;
+}
+
+/* 進入頁面後進行的動畫 */
+.openweb_animation{
+    width: 100%;
+    height: 100vh;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.openweb_box{
+    width: 20%;
+    height: 15%;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* 影片或相片部分 */
+.section_video{
+    width: 100%;
+    height: 100vh;
+    background-color: palevioletred;
+    position: relative;
+}
+
+.section_video .video_logo{
+    width: 398px;
+    height: 126px;
+    position: absolute;
+    top: 110px;
+    left: 108px;
+    background-color: tan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.section_video .video_prompt{
+   width: 125px;
+   height: 100px;
+   position: absolute;
+   left: 50%;
+   bottom: 61px;
+   transform: translateX(-50%);
+   display: flex;
+   flex-direction: column;
+}
+
+.section_video .video_prompt .prompt_word{
+   width: 100%;
+   height: 50%;
+   color: white;
+   text-align: center;
+ }
+
+ .section_video .video_prompt .test{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 999px;
+    margin: 0 auto;
+ }
+
+ /* nav */
+ nav{
+    width: 100%;
+    height: 118px;
+    background-color: tomato;
+    position: sticky;
+    top: 0;
+    display: flex;
+    z-index: 9999999999999;
+ }
+
+ nav #nav_box{
+    width: 1170px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ nav #nav_box .nav_left{
+    width: 30%;
+    height: 80%;
+    background-color: teal;
+ }
+
+ nav #nav_box .nav_right{
+    width: 70%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+ }
+
+ nav #nav_box .nav_right a{
+     text-decoration: none;
+ }
+
+ nav #nav_box .nav_right .word{
+    width: 146px;
+    height: 88px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+ }
+
+ /* 三大區塊 */
+.atmosphere{
+    width: 100%;
+    height: calc(100vh - 118px);
+    background-color: gray;
+    display: flex;
+ }
+
+ .atmosphere :nth-child(2){
+     background-color: white;
+ }
+
+ .atmosphere .atmosphere_box{
+    width: 33.333333333333%;
+    height: calc(100vh - 118px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 0 50px 0;
+}
+
+/* 輪播-牽起他的手 */
+.honey{
+    width: 100%;
+    height: calc(100vh - 118px);
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* 輪播-我們結婚吧 */
+.marry{
+    width: 100%;
+    height: calc(100vh - 118px);
+    background-color: pink;
+    padding: 50px 0;
+}
+
+/* 親友相見 */
+.family{
+    width: 100%;
+    height: calc(100vh - 118px);
+    background-color: orange;
+}
+
+/* 心之快遞 */
+#news{
+    margin: 50px 0;
+}
+
+.news{
+    width: 100%;
+    height: calc(100vh - 118px);
+    background-color: aquamarine;
+}
+
+/* 心之餐桌 */
+.table{
+    width: 100%;
+    height: calc(100vh - 118px);
+    background-color: coral;
+}
+
+/* 社群連結 */
+.app{
+    width: 100%;
+    height: calc(100vh - 118px);
+    background-color: rosybrown;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    height: 30vh;
+    background-color: #432661;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footerbox{
+    width: 1170px;
+    height: 70%;
+}
+
+
+footer .footerbox .top{
+    width: 100%;
+    height: 85%;
+    background-color: red;
+    display: flex;
+}
+
+footer .footerbox .top .left{
+    width: 40%;
+    height: 100%;
+    background-color:black;
+}
+
+footer .footerbox .top .right{
+    width: 60%;
+    height: 100%;
+    background-color:brown;
+}
+
+footer .footerbox .bottom{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #606060;
+    font-size: 18.48px;
+    font-family: 微软雅黑;
+    letter-spacing: 3px;
+}

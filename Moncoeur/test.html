@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* 邊框左右animate效果 */
+        .box {
+            width: 300px;
+            height: 200px;
+            background-color: aqua;
+            position: relative;
+        }
+
+        /* 利用偽元素去建立初見畫面*/
+        .box::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 10%;
+            border-top:2px solid black;
+            transition: 2s;
+        }
+
+        .box::after {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: '';
+            width: 10%;
+            border-top:2px solid black;
+            transition: 2s;
+        }
+
+        /* hover變動至想要範圍 */
+        .box:hover::before {
+            width: 100%;
+            transition: 1s;
+        }
+
+        .box:hover::after {
+            width: 100%;
+            transition: 1s;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
