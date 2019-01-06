@@ -17,12 +17,12 @@
 
 <body>
   <!-- 首頁動畫區塊 -->
-  <section id="logo_anima" style="height: 100vh" class="container-fluid position-relative d-flex justify-content-center align-items-center">
+  <section id="logo_anima" style="height: 100vh" class="w-100 container-fluid position-relative d-flex justify-content-center align-items-center">
     <div>Lorem, ipsum dolor.</div>
   </section>
 
   <!-- 影片或圖片 -->
-  <section id="banner" style="height: 100vh" class="container-fluid position-relative">
+  <section id="banner" style="height: 100vh" class="w-100 container-fluid position-relative">
     <div>Lorem, ipsum dolor.</div>
     <div id="click" class="click position-absolute d-flex flex-column align-items-center">
       <p>Click Enter</p>
@@ -34,41 +34,43 @@
 
   <!-- nav -->
   <nav id="nav" class="w-100 d-flex align-items-center">
-    <div class="container d-flex justify-content-between">
-      <div class="logo">
-        <p>Lorem, ipsum dolor.</p>
-      </div>
-      <div class="d-flex">
-        <a id="word" href="" class="d-flex flex-column justify-content-center align-items-center">
-          <div class="text-center nav_word">
-            <p>心之所向</p>
-            <small>Atmosphere</small>
-          </div>
-        </a>
-        <a id="word" href="" class="d-flex flex-column justify-content-center align-items-center">
-          <div class="text-center nav_word">
-            <p>心之快遞</p>
-            <small>News</small>
-          </div>
-        </a>
-        <a id="word" href="" class="d-flex flex-column justify-content-center align-items-center">
-          <div class="text-center nav_word">
-            <p>心之餐桌</p>
-            <small>Restaurant</small>
-          </div>
-        </a>
-        <a id="word" href="" class="d-flex flex-column justify-content-center align-items-center">
-          <div class="text-center nav_word">
-            <p>社群連結</p>
-            <small>Instagram</small>
-          </div>
-        </a>
+    <div class="container">
+      <div class="row  d-flex justify-content-between">
+        <div class="col">
+          <p>logo</p>
+        </div>
+        <div class="col d-flex">
+          <a id="word" href="" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="text-center nav_word">
+              <p>心之所向</p>
+              <small>Atmosphere</small>
+            </div>
+          </a>
+          <a id="word" href="" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="text-center nav_word">
+              <p>心之快遞</p>
+              <small>News</small>
+            </div>
+          </a>
+          <a id="word" href="" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="text-center nav_word">
+              <p>心之餐桌</p>
+              <small>Restaurant</small>
+            </div>
+          </a>
+          <a id="word" href="" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="text-center nav_word">
+              <p>社群連結</p>
+              <small>Instagram</small>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
   <!-- 三大區塊 -->
-  <section id="three_section" style="height:calc(100vh - 118px)" class="container-fluid">
+  <section id="three_section" style="height:calc(100vh - 118px)" class="w-100 container-fluid">
     <div style="height:100%" class="row">
       <div style="height:100%" class="col-12 col-sm-4 position-relative d-flex justify-content-center">
         <p id="word" class="position-absolute text-center">Lorem, ipsum dolor.</p>
@@ -83,29 +85,29 @@
   </section>
 
   <!-- 牽起他的手 -->
-  <section id="date" style="height:calc(100vh - 118px)" class="container bg-success d-flex justify-content-center">
+  <section id="date" style="height:calc(100vh - 118px)" class="w-100 container bg-success d-flex justify-content-center">
     牽起他的手
   </section>
 
   <!-- 我們結婚吧 -->
-  <section style="height:calc(100vh - 118px)" class="container-fluid bg-info">
+  <section style="height:calc(100vh - 118px)" class="w-100 container-fluid bg-info">
     我們結婚吧
   </section>
 
   <!-- 親友 -->
-  <section id="family" style="height:calc(100vh - 118px)" class="container bg-primary d-flex justify-content-center">
+  <section id="family" style="height:calc(100vh - 118px)" class="w-100 container bg-primary d-flex justify-content-center">
     溫暖的幸福
   </section>
 
   <!-- 消息 -->
-  <section id="news" style="height:calc(100vh - 118px)" class="container-fluid d-flex justify-content-center bg-dark">
+  <section id="news" style="height:calc(100vh - 118px)" class="w-100 container-fluid d-flex justify-content-center bg-dark">
     <div class="container bg-info">
       心之快遞
     </div>
   </section>
 
   <!-- 餐桌 -->
-  <section style="height:calc(100vh - 118px)" class="container-fluid">
+  <section style="height:calc(100vh - 118px)" class="w-100 container-fluid">
     <div style="height:20%" class="text-center">132</div>
     <div style="height:80%" class="row bg-info d-flex">
       <div class="col">313</div>
@@ -114,14 +116,14 @@
   </section>
 
   <!-- 社群連結 -->
-  <section id="ig" style="height:1482px" class="container bg-dark text-light">
+  <section id="ig" style="height:1482px" class="w-100 container bg-dark text-light">
     ig
   </section>
 
   <!-- footer -->
-  <footer id="footer" style="height:378px" class="container-fluid">
+  <footer id="footer" style="height:50vh" class="w-100 container-fluid">
     <div style="height:100%" class="container">
-      <div style="height:40%" class="d-flex justify-content-around align-items-center">
+      <div style="height:40%" class="row d-flex justify-content-around align-items-center">
         <div>
           <a id="footer_a" href="#" class="word_top d-flex flex-column align-items-center">
             <p id="word">心之家族</p>
@@ -147,15 +149,17 @@
           </a>
         </div>
       </div>
-      <div style="height:40%" class="d-flex flex-column justify-content-center text-center">
-        <div style="height:100%" class="word_top d-flex flex-column text-center align-items-center">
+      <div style="height:40%" class="row d-flex flex-column justify-content-center text-center">
+        <div style="height:100%" class="word_top d-flex flex-column text-center align-items-center justify-content-center">
           <p id="word" class="word_center word_inline">TEL:04-22398900 │ FAX:04-22398901</p>
           <p id="word" class="word_center">E-mail:service2@moncoeur.com.tw</p>
           <p id="word" class="word_center">Add:台中市北屯區民政里芳庭路1號(緊鄰國際高爾夫球場)</p>
         </div>
       </div>
-      <div style="height:20%" class="word_bottom d-flex align-items-center justify-content-center">
-        <p id="word">心之芳庭版權所有、轉載必究.Copyright © moncoeur</p>
+      <div style="height:20%" class="row word_bottom d-flex text-center align-items-center">
+        <p id="word" class="col">
+          心之芳庭版權所有、轉載必究.Copyright © moncoeur
+        </p>
       </div>
     </div>
   </footer>
