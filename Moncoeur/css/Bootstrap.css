@@ -50,7 +50,7 @@ p, small{
     position: sticky;
     top: 0;
     z-index: 999999999999;
-    background-color:white;
+    background-color:wheat;
 }
 
 #nav .nav_word{
@@ -106,6 +106,10 @@ p, small{
 /* 三大區塊 */
 #three_section #word{
     bottom: 10vh;
+}
+
+#three_section #phone{
+    display: none;
 }
 
 /* 牽起他的手 */
@@ -166,6 +170,15 @@ p, small{
 @media (max-width:700px){
     #nav p, #nav small{
         font-size: 12px;
+    }
+
+    #three_section #computer{
+        display: none;
+    }
+
+    #three_section #phone{
+        display: block;
+        
     }
 
     #footer p, #footer small{
