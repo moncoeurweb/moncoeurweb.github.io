@@ -11,19 +11,6 @@ p, small{
 }
 
 /* logo動畫 */
-#logo_anima{
-    animation: 3s test ease-out;
-    animation-fill-mode: forwards;
-    animation-delay: 3s;
-}
-
-@keyframes test{
-    from{
-        height: 100vh;
-    }to{
-        height: 0;
-    }
-}
 
 /* 影片或圖片 */
 #banner{
@@ -146,7 +133,7 @@ p, small{
 /* footer */
 #footer{
     background-color: #462765;
-    padding: 5vh 0;
+    padding: 10px 0;
 }
 
 #footer #word{
@@ -164,4 +151,15 @@ p, small{
 #footer .word_bottom{
     color: #848484;
     font-family: "Microsoft YaHei";
+}
+
+/* 暫時下，解決小螢幕爆炸問題 */
+@media (max-width:700px){
+    #nav p, #nav small{
+        font-size: 12px;
+    }
+
+    #footer p, #footer small{
+        font-size: 12px;
+    }
 }
