@@ -26,7 +26,7 @@
             left: 0;
             content: '';
             width: 10%;
-            border-top:2px solid black;
+            border-top: 2px solid black;
             transition: 2s;
         }
 
@@ -36,7 +36,7 @@
             right: 0;
             content: '';
             width: 10%;
-            border-top:2px solid black;
+            border-top: 2px solid black;
             transition: 2s;
         }
 
@@ -51,7 +51,32 @@
             transition: 1s;
         }
 
+        /* 暫時放置 */
+        #logo_anima {
+            animation: 3s test ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 3s;
+        }
 
+        @keyframes test {
+            from {
+                height: 100vh;
+            }
+
+            to {
+                height: 0;
+            }
+        }
+
+        /*  */
+        #footer #footer_a {
+            width: 25vh;
+            text-decoration: none;
+        }
+
+        #footer #footer_a:hover {
+            text-decoration: none;
+        }
     </style>
 </head>
 
