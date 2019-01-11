@@ -2,249 +2,190 @@
     box-sizing: border-box;
 }
 
-body{
+p, small{
     margin: 0;
 }
 
-.content{
-    width: 1170px;
-    height: 100%;
-    margin: 0 auto;
+.container{
+    max-width: 1170px;
 }
 
-p{
-    margin: 0;
+/* logo動畫 */
+
+/* 影片或圖片 */
+#banner{
+    padding: 10vh 5vw;
+    background-color: teal;
+    background-image: url("/Moncoeur/img/wedding.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* 進入頁面後進行的動畫 */
-.openweb_animation{
+#banner #click{
+    bottom: 10vh;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+#banner #click div{
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 999px;
+}
+
+#banner #click div .test{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-25%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 15px;
+    border-color: black transparent transparent transparent;
+}
+
+/* nav */
+#nav{
     width: 100%;
-    height: 100vh;
-    background-color: wheat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 118px;
+    position: sticky;
+    top: 0;
+    z-index: 999999999999;
+    background-color:wheat;
 }
 
-.openweb_box{
-    width: 20%;
-    height: 15%;
-    background-color: brown;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+#nav .nav_word{
+    color: #4E4B4B;
 }
 
-/* 影片或相片部分 */
-.section_video{
-    width: 100%;
-    height: 100vh;
-    background-color: palevioletred;
+#nav .nav_word:hover{
+    color: #542569;
+}
+
+#nav a:hover{
+    text-decoration: none;
+    /* background-color: rgba(84,37,105,0.1); */
+}
+
+#nav #word{
+    width: 146px;
+    height: 87px;
+    margin-left: 15px;
     position: relative;
 }
 
-.section_video .video_logo{
-    width: 398px;
-    height: 126px;
+#nav #word::before {
     position: absolute;
-    top: 110px;
-    left: 108px;
-    background-color: tan;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.section_video .video_prompt{
-   width: 125px;
-   height: 100px;
-   position: absolute;
-   left: 50%;
-   bottom: 61px;
-   transform: translateX(-50%);
-   display: flex;
-   flex-direction: column;
-}
-
-.section_video .video_prompt .prompt_word{
-   width: 100%;
-   height: 50%;
-   color: white;
-   text-align: center;
- }
-
- .section_video .video_prompt .test{
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    border-radius: 999px;
-    margin: 0 auto;
- }
-
- /* nav */
- nav{
-    width: 100%;
-    height: 118px;
-    background-color: tomato;
-    position: sticky;
     top: 0;
-    display: flex;
-    z-index: 9999999999999;
- }
-
- nav #nav_box{
-    width: 1170px;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
-
- nav #nav_box .nav_left{
-    width: 30%;
-    height: 80%;
-    background-color: teal;
- }
-
- nav #nav_box .nav_right{
-    width: 70%;
-    height: 80%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
- }
-
- nav #nav_box .nav_right a{
-     text-decoration: none;
- }
-
- nav #nav_box .nav_right .word{
-    width: 146px;
-    height: 88px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
- }
-
- /* 三大區塊 */
-.atmosphere{
-    width: 100%;
-    height: calc(100vh - 118px);
-    background-color: gray;
-    display: flex;
- }
-
- .atmosphere :nth-child(2){
-     background-color: white;
- }
-
- .atmosphere .atmosphere_box{
-    width: 33.333333333333%;
-    height: calc(100vh - 118px);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0 0 50px 0;
+    left: 0;
+    content: '';
+    width: 0;
+    border-top:2px solid #542569;
+    transition: 0.5s;
 }
 
-/* 輪播-牽起他的手 */
-.honey{
-    width: 100%;
-    height: calc(100vh - 118px);
-    background-color: lightskyblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+#nav #word::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: '';
+    width: 0;
+    border-top:2px solid #542569;
+    transition: 0.5s;
 }
 
-/* 輪播-我們結婚吧 */
-.marry{
+#nav #word:hover::before {
     width: 100%;
-    height: calc(100vh - 118px);
-    background-color: pink;
-    padding: 50px 0;
+    transition: 0.5s;
 }
 
-/* 親友相見 */
-.family{
+#nav #word:hover::after {
     width: 100%;
-    height: calc(100vh - 118px);
-    background-color: orange;
+    transition: 0.5s;
 }
 
-/* 心之快遞 */
-#news{
+/* 三大區塊 */
+#three_section #word{
+    bottom: 10vh;
+}
+
+#three_section #phone{
+    display: none;
+}
+
+/* 牽起他的手 */
+#date{
     margin: 50px 0;
+    margin: auto;
 }
 
-.news{
-    width: 100%;
-    height: calc(100vh - 118px);
-    background-color: aquamarine;
+/* 親友 */
+#family{
+    margin: 50px 0;
+    margin: auto;
 }
 
-/* 心之餐桌 */
-.table{
-    width: 100%;
-    height: calc(100vh - 118px);
-    background-color: coral;
+/* 消息 */
+#news{
+    margin: 100px 0 50px 0;
 }
 
 /* 社群連結 */
-.app{
-    width: 100%;
-    height: calc(100vh - 118px);
-    background-color: rosybrown;
+#ig{
+    margin: auto;
 }
 
 /* footer */
-footer{
-    width: 100%;
-    height: 30vh;
-    background-color: #432661;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#footer{
+    background-color: #462765;
+    padding: 10px 0;
 }
 
-footer .footerbox{
-    width: 1170px;
-    height: 70%;
+#footer #footer_a {
+    width: 25vh;
+    text-decoration: none;
 }
 
-
-footer .footerbox .top{
-    width: 100%;
-    height: 85%;
-    background-color: red;
-    display: flex;
+#footer #footer_a:hover {
+    text-decoration: none;
 }
 
-footer .footerbox .top .left{
-    width: 40%;
-    height: 100%;
-    background-color:black;
-}
-
-footer .footerbox .top .right{
-    width: 60%;
-    height: 100%;
-    background-color:brown;
-}
-
-footer .footerbox .bottom{
-    width: 100%;
-    height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #606060;
-    font-size: 18.48px;
-    font-family: 微软雅黑;
+#footer #word{
     letter-spacing: 3px;
+}
+
+#footer .word_top{
+    color: #FEFEFE;
+}
+
+#footer .word_center{
+    font-family: "Microsoft YaHei";
+}
+
+#footer .word_bottom{
+    color: #848484;
+    font-family: "Microsoft YaHei";
+}
+
+/* 暫時下，解決小螢幕爆炸問題 */
+@media (max-width:700px){
+    #nav p, #nav small{
+        font-size: 12px;
+    }
+
+    #three_section #computer{
+        display: none;
+    }
+
+    #three_section #phone{
+        display: block;
+        
+    }
+
+    #footer p, #footer small{
+        font-size: 12px;
+    }
 }
