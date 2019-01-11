@@ -11,54 +11,60 @@ p, small{
 }
 
 /* logo動畫 */
+#logo_anime{
+    height: 100vh;
+    animation: anime_section 1s ease-in;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes anime_section{
+    from{
+        height: 100vh;
+    }to{
+        height: 0;
+    }
+}
+
+#logo_anime .logo{
+    background-image: url("/Moncoeur/img/logo.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: logo_in 5s;
+}
+
+@keyframes logo_in{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
 
 /* 影片或圖片 */
 #banner{
-    padding: 10vh 5vw;
-    background-color: teal;
-    background-image: url("/Moncoeur/img/wedding.jpg");
+    height: 100vh;
+}
+
+/* nav */
+#nav{
+    height: 10vh;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+}
+
+#nav .img{
+    background-image: url("/Moncoeur/img/logo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-#banner #click{
-    bottom: 10vh;
-    left: 50%;
-    transform:translateX(-50%);
-}
-
-#banner #click div{
-    width: 60px;
-    height: 60px;
-    margin-top: 10px;
-    border: 1px solid black;
-    border-radius: 999px;
-}
-
-#banner #click div .test{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-25%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 15px 15px 0 15px;
-    border-color: black transparent transparent transparent;
-}
-
-/* nav */
-#nav{
-    width: 100%;
-    height: 118px;
-    position: sticky;
-    top: 0;
-    z-index: 999999999999;
-    background-color:wheat;
-}
-
 #nav .nav_word{
     color: #4E4B4B;
+    font-size: 22px;
 }
 
 #nav .nav_word:hover{
@@ -67,17 +73,14 @@ p, small{
 
 #nav a:hover{
     text-decoration: none;
-    /* background-color: rgba(84,37,105,0.1); */
 }
 
-#nav #word{
-    width: 146px;
-    height: 87px;
-    margin-left: 15px;
+#nav .word{
+    margin-left: 25px;
     position: relative;
 }
 
-#nav #word::before {
+#nav .word::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -87,7 +90,7 @@ p, small{
     transition: 0.5s;
 }
 
-#nav #word::after {
+#nav .word::after {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -97,29 +100,87 @@ p, small{
     transition: 0.5s;
 }
 
-#nav #word:hover::before {
+#nav .word:hover::before {
     width: 100%;
     transition: 0.5s;
 }
 
-#nav #word:hover::after {
+#nav .word:hover::after {
     width: 100%;
     transition: 0.5s;
 }
 
 /* 三大區塊 */
-#three_section #word{
-    bottom: 10vh;
+#three_section{
+    height: 90vh;
 }
 
-#three_section #phone{
-    display: none;
+#three_section .overlay_box{
+    top: 0;
+    background-color: rgba(158, 133, 188, 0.2);
+}
+
+#three_section .col{
+    padding: 0;
+}
+
+#three_section #left{
+    background-image: url("/Moncoeur/img/date.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#three_section #center{
+    background-image: url("/Moncoeur/img/wedding.jpg");
+    background-size: 200%;
+    background-position: 50% 65%;
+    background-repeat: no-repeat;
+}
+
+#three_section #right{
+    background-image: url("/Moncoeur/img/family.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#three_section .overlay{
+    border: 1px solid white;
+    color: transparent;
+}
+
+#three_section .overlay:hover{
+    background-color: rgba(71, 39,102, 0.5);
+    color: white;
+}
+
+#three_section a:hover{
+    text-decoration: none;
+}
+
+#three_section p{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 微軟正黑體;
+    letter-spacing: 5px;
+    writing-mode: vertical-lr;
 }
 
 /* 牽起他的手 */
 #date{
     margin: 50px 0;
     margin: auto;
+}
+
+/* 結婚 */
+#wedding{
+    height: 100vh;
+    background-image: url("/Moncoeur/img/bg_img.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* 親友 */
@@ -130,62 +191,115 @@ p, small{
 
 /* 消息 */
 #news{
-    margin: 100px 0 50px 0;
+    height: 100vh;
+    background-image: url("/Moncoeur/img/bg_img.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* 餐桌 */
+#restaurant{
+    height: 90vh;
+}
+
+#restaurant #top{
+    height: 20%;
+}
+
+#restaurant #bottom{
+    height: 80%;
+}
+
+#restaurant a{
+    text-decoration: none;
+}
+
+#restaurant .hover_effect{
+    width: 25vw;
+    height: 50vh;
+    font-size: 55px;
+    color: white;
+    background-color: rgba(71, 39,102, 0.5);
+    border-radius: 9999999px;
+}
+
+#restaurant .hover_effect .menu{
+    letter-spacing: 27px;
+}
+
+#restaurant #bottom #left{
+    background-image: url("/Moncoeur/img/restaurant_left.jpg");
+    background-size: 100% 115%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#restaurant #bottom #right{
+    background-image: url("/Moncoeur/img/restaurant_right.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* 社群連結 */
 #ig{
-    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+#ig #top_row, #ig #bottom_row{
+    height: 50vh;
+}
+
+#ig .center{
+    height: 7vh;
 }
 
 /* footer */
+#footer .container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
 #footer{
     background-color: #462765;
-    padding: 10px 0;
 }
 
-#footer #footer_a {
-    width: 25vh;
+#footer #footer_top{
+    margin-bottom: 2.5rem;
+}
+
+#footer a{
+    font-size: 22px;
+    color: rgba(255,255,255, 0.6);
+}
+
+#footer a{
     text-decoration: none;
 }
 
-#footer #footer_a:hover {
-    text-decoration: none;
+#footer #footer_centerword{
+    font-size: 20px;
+    letter-spacing: 7px;
+    line-height: 50px;
+    font-family: Helvetica, Arial, "Microsoft YaHei", STHeitiSC-Light, simsun, "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", sans-serif;
 }
 
-#footer #word{
-    letter-spacing: 3px;
+#footer .hr{
+    width: 1px;
+    height: 35px;
+    background-color: #231815;
 }
 
-#footer .word_top{
-    color: #FEFEFE;
+#footer hr{
+    margin: 0;
+    color: #462639;
 }
 
-#footer .word_center{
-    font-family: "Microsoft YaHei";
-}
-
-#footer .word_bottom{
-    color: #848484;
-    font-family: "Microsoft YaHei";
-}
-
-/* 暫時下，解決小螢幕爆炸問題 */
-@media (max-width:700px){
-    #nav p, #nav small{
-        font-size: 12px;
-    }
-
-    #three_section #computer{
-        display: none;
-    }
-
-    #three_section #phone{
-        display: block;
-        
-    }
-
-    #footer p, #footer small{
-        font-size: 12px;
-    }
+#footer #copyright{
+    color: #858585;
+    font-size: 18px;
+    letter-spacing: 7px;
+    font-family: Helvetica, Arial, "Microsoft YaHei", STHeitiSC-Light, simsun, "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", sans-serif;
 }
