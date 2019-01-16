@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
   <title>心之芳庭Moncoeur</title>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
 
   <!-- css -->
   <link rel="stylesheet" href="/Moncoeur/css/moncoeur.css">
@@ -17,47 +19,46 @@
 
 <body>
   <!-- 首頁動畫區塊 -->
-  <!-- <section id="logo_anime" class="w-100 container-fluid">
+  <section id="logo_anime" class="w-100 container-fluid">
     <div class="container w-100 h-100 d-flex justify-content-center align-items-center">
-        <div class="logo w-50 h-50"></div>
+      <div class="logo w-50 h-50"></div>
     </div>
-  </section> -->
+  </section>
 
   <!-- 影片或圖片 -->
-  <section id="banner" class="w-100 container-fluid bg-info">
+  <section id="banner" class="container-fluid position-relative">
+    <video id="banner_video" loop="true" autoplay="autoplay" muted="true" src="/Moncoeur/img/bannervideo.mp4"></video>
   </section>
 
   <!-- nav -->
-  <nav id="nav" class="w-100 position-sticky d-flex align-items-center">
+  <nav id="nav" class="w-100 position-sticky d-flex align-items-center justify-content-between">
     <div class="container">
       <div class="row d-flex justify-content-between">
-        <div class="col-2 w-100">
+        <div class="col-3 w-100">
           <a href="#">
             <div class="img w-100 h-100 p-3"></div>
           </a>
         </div>
-        <div class="col-2"></div>
-        <div class="col-2"></div>
-        <div class="col-6 d-flex h-100">
-          <a id="go_three_section" href="#three_section" class="word w-100 h-80 d-flex flex-column justify-content-center align-items-center">
+        <div class="col h-100 d-flex justify-content-end">
+          <a id="go_three_section" href="#three_section" class="word h-75">
             <div class="text-center nav_word">
               <p>心之所向</p>
               <small>Atmosphere</small>
             </div>
           </a>
-          <a id="go_news" href="#news" class="word w-100 h-80 d-flex flex-column justify-content-center align-items-center">
+          <a id="go_news" href="#news" class="word h-75">
             <div class="text-center nav_word">
               <p>心之快遞</p>
               <small>News</small>
             </div>
           </a>
-          <a id="go_restaurant" href="#restaurant" class="word w-100 h-80 d-flex flex-column justify-content-center align-items-center">
+          <a id="go_restaurant" href="#restaurant" class="word h-75">
             <div class="text-center nav_word">
               <p>心之餐桌</p>
               <small>Restaurant</small>
             </div>
           </a>
-          <a id="go_ig" href="#ig" class="word w-100 h-80 d-flex flex-column justify-content-center align-items-center">
+          <a id="go_ig" href="#ig" class="word h-75">
             <div class="text-center nav_word">
               <p>社群連結</p>
               <small>Instagram</small>
@@ -68,31 +69,97 @@
     </div>
   </nav>
 
+  <nav id="small_nav">
+    <div id="small_navbtn" class="button d-flex flex-column align-items-center justify-content-center">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div id="small_navword" class="w-100">
+      <div class="w-100 h-25 d-flex text-center align-items-center">
+        <div class="w-50">
+          <a href="#date" class="text-light font-weight-bold">
+            <p>心之所向</p>
+            <small>Atmosphere</small>
+          </a>
+        </div>
+        <div class="w-50">
+          <a href="#news" class="text-light font-weight-bold">
+            <p>心之快遞</p>
+            <small>News</small>
+          </a>
+        </div>
+      </div>
+      <div class="w-100 h-25 d-flex text-center align-items-center">
+        <div class="w-50">
+          <a href="#restaurant" class="text-light font-weight-bold">
+            <p>心之餐桌</p>
+            <small>Restaurant</small>
+          </a>
+        </div>
+        <div class="w-50">
+          <a href="#ig" class="text-light font-weight-bold">
+            <p>社群連結</p>
+            <small>Instagram</small>
+          </a>
+        </div>
+      </div>
+      <div class="w-100 h-25 d-flex text-center align-items-center">
+        <div class="w-50">
+          <a href="#" class="text-light font-weight-bold">
+            <p>心之家族</p>
+            <small>Link</small>
+          </a>
+        </div>
+        <div class="w-50">
+          <a href="#" class="text-light font-weight-bold">
+            <p>心之婚禮</p>
+            <small>Reserve</small>
+          </a>
+        </div>
+      </div>
+      <div class="w-100 h-25 d-flex text-center align-items-center">
+        <div class="w-50">
+          <a href="#" class="text-light font-weight-bold">
+            <p>心之嚮導</p>
+            <small>Guide</small>
+          </a>
+        </div>
+        <div class="w-50">
+          <a href="#" class="text-light font-weight-bold">
+            <p>心之禮物</p>
+            <small>Souvenir</small>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <!-- 三大區塊 -->
-  <section id="three_section" class="w-100 container-fluid">
+  <section id="three_section" class="container-fluid">
     <div id="computer" class="row h-100">
-      <div id="left" class="col position-relative w-100 h-100">
-        <div class="overlay_box w-100 h-100 absolute p-5">
+      <div id="left" class="col w-100 h-100">
+        <div class="overlay_box w-100 h-100">
           <a href="#date">
-            <div class="w-100 h-100 overlay d-flex justify-content-center align-items-center">
+            <div class="overlay d-flex justify-content-center align-items-center">
               <p>讓妳與另一半甜蜜如詩</p>
             </div>
           </a>
         </div>
       </div>
-      <div id="center" class="col position-relative w-100 h-100">
-        <div class="overlay_box w-100 h-100 absolute p-5">
+      <div id="center" class="col w-100 h-100">
+        <div class="overlay_box w-100 h-100">
           <a href="#wedding">
-            <div class="w-100 h-100 overlay d-flex justify-content-center align-items-center">
+            <div class="overlay d-flex justify-content-center align-items-center">
               <p>給她許一個相戀的誓約</p>
             </div>
           </a>
         </div>
       </div>
-      <div id="right" class="col position-relative w-100 h-100">
-        <div class="overlay_box w-100 h-100 absolute p-5">
+      <div id="right" class="col w-100 h-100">
+        <div class="overlay_box w-100 h-100">
           <a href="#family">
-            <div class="w-100 h-100 overlay d-flex justify-content-center align-items-center">
+            <div class="overlay d-flex justify-content-center align-items-center">
               <p>親友相見團聚盡歡</p>
             </div>
           </a>
@@ -102,67 +169,354 @@
   </section>
 
   <!-- 牽起他的手 -->
-  <section id="date" class="w-100 container bg-success d-flex justify-content-center">
-    牽起他的手
+  <section id="date" class="w-100 container">
+    <div id="top" class="p-3">
+      <p id="title">牽起他的手，讓妳與另一半甜蜜如詩</p>
+      <p id="small_title">Let you be sweet with the other half</p>
+    </div>
+    <div id="small_top" class="d-flex flex-column align-items-center justify-content-center">
+      <p id="title">牽起他的手，</p>
+      <p id="title">讓妳與另一半甜蜜如詩</p>
+      <p id="small_title">Let you be sweet with the other half</p>
+    </div>
+    <div id="bottom" class="d-flex justify-content-between position-relative">
+      <div id="left" class="col-md-3 h-100 w-100 position-absolute position-relative">
+        <div id="date_left" class="img_box w-100 swiper-container date_bs">
+          <div class="swiper-wrapper">
+            <div id="img_a" class="swiper-slide"></div>
+            <div id="img_b" class="swiper-slide"></div>
+            <div id="img_c" class="swiper-slide"></div>
+            <div id="img_d" class="swiper-slide"></div>
+            <div id="img_e" class="swiper-slide"></div>
+          </div>
+        </div>
+        <p class="h-100 position-absolute">我想問一下路，到你心裡的路。</p>
+      </div>
+      <div id="center" class="col-12 col-md-6 position-absolute">
+        <div id="date_center" class="img_box w-100 swiper-container position-relative">
+          <div class="swiper-wrapper">
+            <div id="img_b" class="swiper-slide"></div>
+            <div id="img_c" class="swiper-slide"></div>
+            <div id="img_d" class="swiper-slide"></div>
+            <div id="img_e" class="swiper-slide"></div>
+            <div id="img_a" class="swiper-slide"></div>
+          </div>
+        </div>
+        <div class="center_word position-absolute d-flex">
+          <p id="date_number">&nbsp;</p>
+          <p>/&nbsp;5</p>
+        </div>
+        <div class="swiper-button-prev position-absolute"></div>
+        <div class="swiper-button-next position-absolute"></div>
+      </div>
+      <div id="right" class="col-md-3 position-absolute position-relative">
+        <div id="date_right" class="img_box w-100 swiper-container date_bs">
+          <div class="swiper-wrapper">
+            <div id="img_c" class="swiper-slide"></div>
+            <div id="img_d" class="swiper-slide"></div>
+            <div id="img_e" class="swiper-slide"></div>
+            <div id="img_a" class="swiper-slide"></div>
+            <div id="img_b" class="swiper-slide"></div>
+          </div>
+        </div>
+        <div class="word position-absolute">
+          <p>你覺得你會喜歡我嗎?</p>
+          <p>沒關係~我教你</p>
+          <p>教你喜歡我。</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- 我們結婚吧 -->
-  <section id="wedding" class="w-100 container-fluid">
-    我們結婚吧
+  <section id="wedding">
+    <div id="top" class="h-25 container p-5">
+      <p id="title">我們結婚吧，給她許一個相戀的誓約</p>
+      <p id="small_title">Give her a vow to fall in love</p>
+    </div>
+    <div id="small_top" class="d-flex flex-column align-items-center justify-content-center">
+      <p id="title">我們結婚吧，</p>
+      <p id="title">給她許一個相戀的誓約</p>
+      <p id="small_title">Give her a vow to fall in love</p>
+    </div>
+    <div id="bottom" class="position-relative"></div>
   </section>
 
   <!-- 親友 -->
-  <section id="family" class="w-100 container bg-primary d-flex justify-content-center">
-    溫暖的幸福
+  <section id="family" class="w-100 container">
+    <div id="top" class="p-3">
+      <p id="title">溫暖的幸福，親友相見團聚盡歡</p>
+      <p id="small_title">Friends and relatives meet and reunite</p>
+    </div>
+    <div id="small_top" class="d-flex flex-column align-items-center justify-content-center">
+      <p id="title">溫暖的幸福，</p>
+      <p id="title">親友相見團聚盡歡</p>
+      <p id="small_title">Friends and relatives</p>
+      <p id="small_title">meet and reunite</p>
+    </div>
+    <div id="bottom" class="d-flex justify-content-between position-relative">
+      <div id="left" class="col-md-3 h-100 w-100 position-absolute position-relative">
+        <div id="family_left" class="img_box w-100 swiper-container">
+          <div class="swiper-wrapper">
+            <div id="img_a" class="swiper-slide"></div>
+            <div id="img_b" class="swiper-slide"></div>
+            <div id="img_c" class="swiper-slide"></div>
+            <div id="img_d" class="swiper-slide"></div>
+            <div id="img_e" class="swiper-slide"></div>
+          </div>
+        </div>
+        <div id="left_word" class="h-100 position-absolute">
+          <p>隨著年歲的推移，</p>
+          <p>我最不想改變的一樣東西就是，</p>
+          <p>對爸爸媽媽的愛。</p>
+        </div>
+      </div>
+      <div id="center" class="col-12 col-md-6 position-absolute">
+        <div id="family_center" class="img_box w-100 swiper-container position-relative">
+          <div class="swiper-wrapper">
+            <div id="img_b" class="swiper-slide"></div>
+            <div id="img_c" class="swiper-slide"></div>
+            <div id="img_d" class="swiper-slide"></div>
+            <div id="img_e" class="swiper-slide"></div>
+            <div id="img_a" class="swiper-slide"></div>
+          </div>
+        </div>
+        <div class="center_word position-absolute d-flex">
+          <p id="date_number">&nbsp;</p>
+          <p>/&nbsp;5</p>
+        </div>
+        <div class="swiper-button-prev position-absolute"></div>
+        <div class="swiper-button-next position-absolute"></div>
+      </div>
+      <div id="right" class="col-md-3 position-absolute position-relative">
+        <div id="family_right" class="img_box w-100 swiper-container">
+          <div class="swiper-wrapper">
+            <div id="img_c" class="swiper-slide"></div>
+            <div id="img_d" class="swiper-slide"></div>
+            <div id="img_e" class="swiper-slide"></div>
+            <div id="img_a" class="swiper-slide"></div>
+            <div id="img_b" class="swiper-slide"></div>
+          </div>
+        </div>
+        <div class="word position-absolute">
+          <p>好的友情永遠不變，</p>
+          <p>只要一個電話一次見面，</p>
+          <p>感情會愈加深厚。</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- 消息 -->
-  <section id="news" class="w-100 container-fluid d-flex justify-content-center bg-dark">
-    <div class="container">
-      心之快遞
+  <section id="news" class="w-100 container-fluid d-flex justify-content-center bg-dark position-relative">
+    <div id="top_section" class="container h-25">
+      <div class="row h-100 d-flex flex-column align-items-center justify-content-center position-relative">
+        <div id="top" class="d-flex flex-column align-items-center justify-content-center">
+          <p id="title">心之快遞</p>
+          <p id="small_title">關於每一筆愛與幸福的訊息，都在這裡為你／妳快快傳遞。</p>
+        </div>
+        <div id="bottom" class="row w-100 text-center d-flex position-absolute">
+          <div id="news_change" class="news_tag_left w-50">
+            <h3 class="font-weight-bold">最新消息</h3>
+          </div>
+          <div id="news_change" class="news_tag_right w-50">
+            <h3 class="font-weight-bold">收費資訊</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="bg_color" class="position-absolute w-100 h-75 d-flex align-items-center justify-content-center">
+      <div class="container">
+        <div id="news_word">
+          <a href="#" id="word_section" class="d-flex align-items-center">
+            <p>2018.12.20</p>
+            <div class="box text-light d-flex align-items-center justify-content-center">婚慶</div>
+            <p class="color_word">婚攝六便士獨家合作專案</p>
+          </a>
+          <hr class="w-100">
+          <a href="#" id="word_section" class="d-flex align-items-center">
+            <p>2018.10.10</p>
+            <div class="box text-light d-flex align-items-center justify-content-center">約會</div>
+            <p class="color_word">愛情郵局、郵愛傳遞</p>
+          </a>
+          <hr class="w-100">
+          <a href="#" id="word_section" class="d-flex align-items-center">
+            <p>2018.08.11</p>
+            <div class="box text-light d-flex align-items-center justify-content-center">婚慶</div>
+            <p class="color_word">預約勘場，好禮雙重送</p>
+          </a>
+          <hr class="w-100">
+          <a href="#" id="word_section" class="d-flex align-items-center">
+            <p>2018.06.29</p>
+            <div class="box text-light d-flex align-items-center justify-content-center">婚慶</div>
+            <p class="color_word">閃閃惹人愛，2019婚禮專案</p>
+          </a>
+          <hr class="w-100">
+          <a href="#" id="word_section" class="d-flex align-items-center">
+            <p>2018.06.20</p>
+            <div class="box text-light d-flex align-items-center justify-content-center">公告</div>
+            <p class="color_word">2019最新收費</p>
+          </a>
+        </div>
+        <div id="money_word">
+          <div class="d-flex align-items-center">
+            <p>入園費每人200</p>
+            <small>可折抵園區消費150</small>
+          </div>
+          <div class="d-flex">
+            <p>營業時間：9:30-19:30(18:00後進場免費)</p>
+          </div>
+          <h3>&nbsp;</h3>
+          <small class="d-flex align-items-center">給嚮往莊園婚禮的新人們一個美好的回憶。</small>
+          <p>歡迎預約參觀 04-2239-8900轉6（無開放自由參觀）</p>
+          <h3>&nbsp;</h3>
+          <p>餐廳、廣場營業時間：</p>
+          <h3>&nbsp;</h3>
+          <div class="d-flex h-100">
+            <div id="line"></div>
+            <div class="d-flex flex-column">
+              <small>親親我的家</small>
+              <small>平日11:00-19:00</small>
+              <small>假日10:00-19:00</small>
+            </div>
+            <div id="line"></div>
+            <div class="d-flex flex-column">
+              <small>小南法</small>
+              <small>平日11:00-18:00</small>
+              <small>假日10:00-18:00</small>
+            </div>
+            <div id="line"></div>
+            <div class="d-flex flex-column">
+              <small>香檳玫瑰小廣場</small>
+              <small>平日10:30-17:00</small>
+              <small>假日09:30-17:00</small>
+            </div>
+          </div>
+          <h3>&nbsp;</h3>
+          <p>貼心提醒：山區蚊蟲多，請穿著長袖或攜帶防蚊液</p>
+        </div>
+      </div>
+    </div>
+
+    <section id="small_news" class="position-absolute w-100 h-100">
+      <div class="container h-100">
+        <div id="top" class="d-flex flex-column align-items-center justify-content-center">
+          <p id="title">心之快遞</p>
+          <p id="small_title">關於每一筆愛與幸福的訊息，<br>都在這裡為你／妳快快傳遞。</p>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center">
+          <h3 class="font-weight-bold">最新消息</h3>
+          <a href="#">
+            <div class="small_box text-light d-flex flex-column align-items-center justify-content-center">
+              <p>2018.12.20</p>
+              <p>婚攝六便士獨家合作專案</p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="small_box text-light d-flex flex-column align-items-center justify-content-center">
+              <p>2018.10.10</p>
+              <p>預約勘場，好禮雙重送</p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="small_box text-light d-flex flex-column align-items-center justify-content-center">
+              <p>2018.08.11</p>
+              <p>預約勘場，好禮雙重送</p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="small_box text-light d-flex flex-column align-items-center justify-content-center">
+              <p>2018.06.29</p>
+              <p>閃閃惹人愛，2019婚禮專案</p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="small_box text-light d-flex flex-column align-items-center justify-content-center">
+              <p>2018.06.20</p>
+              <p>2019最新收費</p>
+            </div>
+          </a>
+        </div>
+    </section>
+  </section>
+
+  <section id="small_money" class="d-flex flex-column align-items-center justify-content-center">
+    <h3 id="money_about" class="font-weight-bold">收費資訊</h3>
+    <div id="small_money_bg" class="w-100 d-flex flex-column align-items-center justify-content-center">
+      <div id="money_word">
+        <div class="d-flex flex-column align-items-center">
+          <p class="font-weight-bold">入園費每人200</p>
+          <small>可折抵園區消費150</small>
+          <p class="font-weight-bold">營業時間：9:30-19:30</p>
+          <p class="font-weight-bold">(18:00後進場免費)</p>
+          <h3>&nbsp;</h3>
+          <small class="d-flex align-items-center">給嚮往莊園婚禮的新人們</small>
+          <small>一個美好的回憶。</small>
+          <p class="font-weight-bold">歡迎預約參觀 </p>
+          <p class="font-weight-bold">04-2239-8900轉6</p>
+          <p class="font-weight-bold">（無開放自由參觀）</p>
+          <h3>&nbsp;</h3>
+          <p class="font-weight-bold">餐廳、廣場營業時間</p>
+          <small>&nbsp;</small>
+          <div class="d-flex flex-column align-items-center">
+            <small>親親我的家</small>
+            <small>平日11:00-19:00</small>
+            <small>假日10:00-19:00</small>
+          </div>
+          <small>&nbsp;</small>
+          <div class="d-flex flex-column align-items-center">
+            <small>小南法</small>
+            <small>平日11:00-18:00</small>
+            <small>假日10:00-18:00</small>
+          </div>
+          <small>&nbsp;</small>
+          <div class="d-flex flex-column align-items-center">
+            <small>香檳玫瑰小廣場</small>
+            <small>平日10:30-17:00</small>
+            <small>假日09:30-17:00</small>
+          </div>
+          <small>&nbsp;</small>
+          <p class="font-weight-bold">山區蚊蟲多，</p>
+          <p class="font-weight-bold">請穿著長袖或攜帶防蚊液</p>
+        </div>
+      </div>
+    </div>
     </div>
   </section>
 
   <!-- 餐桌 -->
   <section id="restaurant" class="w-100 container-fluid">
-    <div id="top" class="row p-2 d-flex flex-column align-items-center justify-content-center">
-      <h1>心之餐桌</h1>
-      <p>每一個角落都能成為你們的故事。</p>
+    <div id="top" class="p-2 h-25 d-flex flex-column align-items-center justify-content-center">
+      <p id="title">心之餐桌</p>
+      <p id="small_title">每一個角落都能成為你們的故事。</p>
     </div>
-    <div id="bottom" class="row">
-      <div id="left" class="col-6 w-100 h-100 d-flex justify-content-center align-items-center">
-        <a href="#">
-          <div class="hover_effect d-flex flex-column justify-content-center align-items-center">
-            <div class="w-50 h-50 d-flex flex-column justify-content-center align-items-center">
-              <p>點擊下載</p>
-              <p class="menu">menu</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div id="right" class="col-6 bg-info"></div>
+    <div id="bottom" class="w-100 h-75 d-flex position-relative">
+      <a href="#" class="hover d-flex justify-content-center align-items-center position-relative">
+        <div id="restaurant_left" class="d-flex justify-content-center align-items-center position-absolute"></div>
+      </a>
+      <div id="restaurant_right" class="col position-absolute"></div>
     </div>
   </section>
 
   <!-- 社群連結 -->
   <section id="ig" class="w-100 container">
-    <div id="ig_box" class="w-100 d-flex flex-column justify-content-center align-items-center">
-      <div id="top_row" class="row w-100">
-        <div class="col bg-info"></div>
-        <div class="col-1"></div>
-        <div class="col bg-success"></div>
+    <a href="#">
+      <div id="ig_box" class="w-100 d-flex flex-column justify-content-center align-items-center position-relative">
+        <div id="top_left" class="position-absolute"></div>
+        <div id="top_right" class="position-absolute position-relative">
+          <div id="tr_topleft" class="position-absolute"></div>
+          <div id="tr_topright" class="position-absolute"></div>
+          <div id="tr_bottomleft" class="position-absolute"></div>
+          <div id="tr_bottomright" class="position-absolute"></div>
+        </div>
+        <div id="bottom_left" class="position-absolute"></div>
+        <div id="bottom_right" class="position-absolute"></div>
       </div>
-      <div class="center">&nbsp;</div>
-      <div id="bottom_row" class="row w-100">
-        <div class="col bg-primary"></div>
-        <div class="col-1"></div>
-        <div class="col bg-dark"></div>
-      </div>
-    </div>
+    </a>
   </section>
 
   <!-- footer -->
-  <footer id="footer" class="w-100 container-fluid">
+  <footer id="footer" class="w-100 container-fluid position-relative">
     <div class="container d-flex justify-content-center align-items-center">
       <div class="footer_box w-100 h-100 p-4">
         <div id="footer_top" class="row">
@@ -218,6 +572,16 @@
     </div>
   </footer>
 
+  <footer id="small_footer">
+    <p class="text-light font-weight-bold">04-22398900</p>
+    <p class="no_word">&nbsp;</p>
+    <p class="text-light font-weight-bold">台中市北屯區民政里芳庭路1號</p>
+    <p class="text-light font-weight-bold">(緊鄰國際高爾夫球場)</p>
+    <p class="no_word">&nbsp;</p>
+    <small>心之芳庭版權所有、轉載必究．</small><br>
+    <small>Copyright © moncoeur</small>
+  </footer>
+
 
 
   <!-- Optional JavaScript -->
@@ -228,6 +592,9 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
+
+  <!-- swiper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
 
   <!-- 載入js -->
   <script src="/Moncoeur/js/moncoeur.js"></script>
