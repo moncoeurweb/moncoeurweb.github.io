@@ -1018,7 +1018,7 @@ p, small, hr{
 
     #small_nav #sn_logo.show{
         display: block;
-        width: 25%;
+        width: 10em;
         height: 75%;
         background-image: url("/Moncoeur/img/logo.png");
         background-size: cover;
@@ -1325,17 +1325,25 @@ p, small, hr{
 
 /* 螢幕寬度低於550px */
 @media (max-width:550px){
-    /* logo */
-    #logo_anime{
+    /* banner */
+    #banner{
         display: none;
     }
 
     /* date */
+    #date{
+        height: 65vh;
+    }
+
     #date #center #img_b{
         background-position: 100% 45%;
     }
 
     /* wedding */
+    #wedding{
+        height: 65vh;
+    }
+
     #wedding .swiper-button-prev{
         left:7%;
     }
@@ -1361,6 +1369,10 @@ p, small, hr{
 
 
     /* family */
+    #family{
+        height: 65vh;
+    }
+
     #family #center #img_b{
         background-position: 20% 100%;
     }
