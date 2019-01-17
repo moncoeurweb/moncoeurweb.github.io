@@ -118,7 +118,7 @@ p, small, hr{
     left: 0;
     content: '';
     width: 0;
-    border-top:2px solid #542569;
+    border-top: 1px solid #542569;
     transition: 0.5s;
 }
 
@@ -128,7 +128,7 @@ p, small, hr{
     right: 0;
     content: '';
     width: 0;
-    border-top:2px solid #542569;
+    border-top: 1px solid #542569;
     transition: 0.5s;
 }
 
@@ -1019,7 +1019,7 @@ p, small, hr{
     #small_nav #sn_logo.show{
         display: block;
         width: 10em;
-        height: 75%;
+        height: 95%;
         background-image: url("/Moncoeur/img/logo.png");
         background-size: cover;
         background-position: center;
@@ -1325,6 +1325,12 @@ p, small, hr{
 
 /* 螢幕寬度低於550px */
 @media (max-width:550px){
+    /* logo */
+    #logo_anime .logo{
+        width: 50%;
+        height: 50%;
+    }
+
     /* banner */
     #banner{
         display: none;

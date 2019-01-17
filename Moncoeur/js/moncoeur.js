@@ -10,20 +10,128 @@ snav_btn.onclick = function () {
       sn_logo.classList.toggle('show');
 };
 
+// 移動效果
+// 重新整理後會返回top，且頁面會如同重新載入般進行頂部動畫效果
+window.onbeforeunload = function () {
+      window.scrollTo(0, 0), 500;
+};
+
+// nav_logo
+$('#nav_logo').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('body').offset().top - $('#nav').height())
+      }, 1000);
+});
+
+// nav_word
+$('#go_three_section').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('#date').offset().top - $('#nav').height())
+      }, 1000);
+});
+
+$('#go_news').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('#news').offset().top - $('#nav').height())
+      }, 1000);
+});
+
+$('#go_restaurant').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('#restaurant').offset().top - $('#nav').height())
+      }, 1000);
+});
+
+$('#go_ig').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('#ig').offset().top - $('#nav').height())
+      }, 1000);
+});
+
+// three_section
+$('#three_left').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('#date').offset().top - $('#nav').height())
+      }, 1000);
+});
+
+$('#three_center').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('#wedding').offset().top - $('#nav').height())
+      }, 1000);
+});
+
+$('#three_right').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('#family').offset().top - $('#nav').height())
+      }, 1000);
+});
+
+// phone_nav
+$('#sn_logo').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('body').offset().top)
+      }, 1000);
+});
+
+$('#sn_godate').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('#date').offset().top)
+      }, 1000);
+});
+
+$('#sn_gonews').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('#news').offset().top)
+      }, 1000);
+});
+
+$('#sn_gotable').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('#restaurant').offset().top)
+      }, 1000);
+});
+
+$('#sn_goig').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('#ig').offset().top)
+      }, 1000);
+});
+
+$('.sn_go').click(function () {
+      $('html,body').animate({
+            scrollTop: ($('body').offset().top)
+      }, 1000);
+});
+
+
+
 // 牽手
 var dleft = new Swiper('#date_left', {
       simulateTouch: false,
       loop: true,
+      effect: 'fade',
+      fade: {
+            crossFade: false,
+      },
 });
 
 var dright = new Swiper('#date_right', {
       simulateTouch: false,
       loop: true,
+      effect: 'fade',
+      fade: {
+            crossFade: false,
+      },
 });
 
 var dcenter = new Swiper('#date_center', {
       simulateTouch: false,
       loop: true,
+      effect: 'fade',
+      fade: {
+            crossFade: false,
+      },
       controller: {
             control: [dleft, dright],
       },
@@ -66,7 +174,7 @@ var wr = new Swiper('#wedding_right', {
 var wall = new Swiper('#wedding_imgall', {
       loop: true,
       controller: {
-            control: [wl,wc,wr],
+            control: [wl, wc, wr],
       },
       navigation: {
             nextEl: '.wedding_next',
@@ -79,16 +187,28 @@ var wall = new Swiper('#wedding_imgall', {
 var fleft = new Swiper('#family_left', {
       simulateTouch: false,
       loop: true,
+      effect: 'fade',
+      fade: {
+            crossFade: false,
+      },
 });
 
 var fright = new Swiper('#family_right', {
       simulateTouch: false,
       loop: true,
+      effect: 'fade',
+      fade: {
+            crossFade: false,
+      },
 });
 
 var fcenter = new Swiper('#family_center', {
       simulateTouch: false,
       loop: true,
+      effect: 'fade',
+      fade: {
+            crossFade: false,
+      },
       controller: {
             control: [fleft, fright],
       },
