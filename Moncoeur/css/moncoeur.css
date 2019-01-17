@@ -6,12 +6,8 @@ p, small, hr{
     margin: 0;
 }
 
-.container{
-    max-width: 1170px;
-}
-
 #title{
-    font-size: 2.25em;
+    font-size: 2em;
     letter-spacing: 5px;
 }
 
@@ -40,8 +36,10 @@ p, small, hr{
 }
 
 #logo_anime .logo{
+    width: 25%;
+    height: 25%;
     background-image: url("/Moncoeur/img/logo.png");
-    background-size: 100% 100%;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     animation: logo_in 5s;
@@ -95,10 +93,10 @@ p, small, hr{
 
 #nav .nav_word{
     color: #4E4B4B;
-    font-size: 1.3em;
+    font-size: 1.25em;
     line-height: 1em;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 1.25vh;
+    padding-bottom: 1.25vh;
 }
 
 #nav .nav_word:hover{
@@ -368,11 +366,111 @@ p, small, hr{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
 }
 
 #wedding #small_top{
     visibility: hidden;
     height: 0;
+}
+
+#wedding .wedding_swiper{
+    height: 85%;
+}
+
+#wedding .word{
+    writing-mode: vertical-lr;
+}
+
+#wedding #bottom{
+    height: 70%;
+}
+
+#wedding #wedding_imgall{
+    height: 5%;
+    z-index: 10;
+}
+
+#wedding #bottom #leftbox{
+    left: -5%;
+}
+
+#wedding #bottom #centerbox{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#wedding #bottom #rightbox{
+    right:-5%;
+}
+
+#wedding #bottom #leftbox p, #wedding #bottom #centerbox p, #wedding #bottom #rightbox p{
+    writing-mode: vertical-lr;
+    letter-spacing: 3px;
+}
+
+#wedding #leftbox #img_a, #wedding #centerbox #img_a, #wedding #rightbox #img_a{
+    width: 100%;
+    height: 100%;
+    background-image: url('/Moncoeur/img/wedding_a.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#wedding #leftbox #img_b, #wedding #centerbox #img_b, #wedding #rightbox #img_b{
+    width: 100%;
+    height: 100%;
+    background-image: url('/Moncoeur/img/wedding_b.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#wedding #leftbox #img_c, #wedding #centerbox #img_c, #wedding #rightbox #img_c{
+    width: 100%;
+    height: 100%;
+    background-image: url('/Moncoeur/img/wedding_c.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#wedding #leftbox #img_d, #wedding #centerbox #img_d, #wedding #rightbox #img_d{
+    width: 100%;
+    height: 100%;
+    background-image: url('/Moncoeur/img/wedding_d.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#wedding .swiper-button-prev{
+    width: 7.5em;
+    top: 0;
+    left:30%;
+    transform: translateY(-50%);
+    background-image: url('/Moncoeur/img/left_button.png');
+    background-size: 50% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#wedding .swiper-button-next{
+    width: 7.5em;
+    top: 0;
+    right: 30%;
+    transform: translateY(-50%);
+    background-image: url('/Moncoeur/img/right_button.png');
+    background-size: 50% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#wedding :focus {
+    outline: none;
 }
 
 /* 親友 */
@@ -677,7 +775,7 @@ p, small, hr{
     width: 100%;
     height: 100%;
     background-image: url("/Moncoeur/img/restaurant_left.jpg");
-    background-size: 100% 115%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     top: 0;
@@ -863,6 +961,13 @@ p, small, hr{
 
 /* 寬度小於950px */
 @media (max-width:950px){
+    #title{
+        font-size: 1.5em;
+    }
+    
+    #small_title{
+        font-size: 1em;
+    }
     /* nav */
     #nav{
         height: 0;
@@ -876,22 +981,50 @@ p, small, hr{
 
     #small_nav .button{
         z-index: 99999;
-        width: 3.5em;
-        height: 3.5em;
+        width: 3em;
+        height: 3em;
         border-radius: 999999999px;
         background-color: white;
         border: 2px solid #542569;
         position: fixed;
         top: .5em;
-        right: .5em;
+        right: .75em;
     }
 
     #small_nav .button div{
-        width: 65%;
+        width: 50%;
         height: 3px;
         background-color: #542569;
-        margin-top: .25em;
-        margin-bottom: .25em;
+        margin-top: .2em;
+        margin-bottom: .2em;
+    }
+
+    #small_nav #small_nav_logo{
+        display: none;
+    }
+
+    #small_nav #small_nav_logo.show{
+        display: block;
+        position: fixed;
+        top: 0;
+        height: 4.5em;
+        background-color: rgba(255,255,255,0.5);
+        z-index: 999;
+    }
+
+    #small_nav #sn_logo{
+        display: none;
+    }
+
+    #small_nav #sn_logo.show{
+        display: block;
+        width: 25%;
+        height: 75%;
+        background-image: url("/Moncoeur/img/logo.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 999;
     }
 
     #small_nav #small_navword{
@@ -1006,14 +1139,14 @@ p, small, hr{
     }
 
     #small_money #money_word p{
-        font-size: 1.5em;
+        font-size: 1.15em;
         font-weight: 700;
         letter-spacing: 5px;
         color: #542569;
     }
     
     #small_money #money_word small{
-        font-size: 1em;
+        font-size: .8em;
         font-weight: 700;
         letter-spacing: 7px;
         color: rgba(71, 39,102, 0.7);
@@ -1056,11 +1189,18 @@ p, small, hr{
 /* 螢幕寬度小於768px */
 @media (max-width:768px){
     #title{
-        font-size: 1.75em;
+        font-size: 1.25em;
     }
     
     #small_title{
-        font-size: .9em;
+        font-size: .75em;
+    }
+
+    /* banner */
+    #banner video{
+        width: 100%;
+        animation: none;
+        animation-delay: 0s;
     }
 
     /* date */
@@ -1071,6 +1211,11 @@ p, small, hr{
 
     #date #title {
         padding-top: 0;
+    }
+
+    #date #center{
+        padding-left: 0;
+        padding-right: 0;
     }
 
     #date #small_top{
@@ -1097,6 +1242,18 @@ p, small, hr{
         height: 25%;
     }
 
+    #wedding #leftbox, #wedding #rightbox{
+        visibility: hidden;
+    }
+
+    #wedding .swiper-button-prev{
+        left:15%;
+    }
+    
+    #wedding .swiper-button-next{
+        right: 15%;
+    }
+
     /* famaily */
     #family #top{
         height: 0;
@@ -1105,6 +1262,11 @@ p, small, hr{
 
     #family #title {
         padding-top: 0;
+    }
+
+    #family #center{
+        padding-left: 0;
+        padding-right: 0;
     }
 
     #family #small_top{
@@ -1125,7 +1287,7 @@ p, small, hr{
     #ig #ig_box:hover{
         height: 50vh;
         background-image: url("/Moncoeur/img/ig_hover.png");
-        background-size: 17em 17em;
+        background-size: 12em 12em;
     }
 
     /* footer */
@@ -1145,18 +1307,69 @@ p, small, hr{
     }
 
     #small_footer p{
-        font-size: 1em;
+        font-size: .75em;
         letter-spacing: 7px;
     }
 
     #small_footer small{
-        font-size: .8em;
+        font-size: .65em;
         letter-spacing: 7px;
         color: #858585;
         font-family: Helvetica, Arial, "Microsoft YaHei", STHeitiSC-Light, simsun, "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", sans-serif;
     }
 
     #small_footer .no_word{
-        font-size: .3em;
+        font-size: .1em;
+    }
+}
+
+/* 螢幕寬度低於550px */
+@media (max-width:550px){
+    /* logo */
+    #logo_anime{
+        display: none;
+    }
+
+    /* date */
+    #date #center #img_b{
+        background-position: 100% 45%;
+    }
+
+    /* wedding */
+    #wedding .swiper-button-prev{
+        left:7%;
+    }
+    
+    #wedding .swiper-button-next{
+        right: 7%;
+    }
+
+    #wedding #centerbox #img_b{
+        background-size: cover;
+        background-position: 70% 100%;
+    }
+
+    #wedding #centerbox #img_d{
+        background-size: cover;
+        background-position: 77% 100%;
+    }
+
+    #wedding #centerbox #img_a{
+        background-size: cover;
+        background-position: 58% 100%;
+    }
+
+
+    /* family */
+    #family #center #img_b{
+        background-position: 20% 100%;
+    }
+
+    #family #center #img_c{
+        background-position: 60% 100%;
+    }
+
+    #family #center #img_e{
+        background-position: 65% 65%;
     }
 }

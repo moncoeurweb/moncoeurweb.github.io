@@ -1,9 +1,13 @@
 // small_nav
 var snav_btn = document.querySelector('#small_navbtn');
 var snav_word = document.querySelector('#small_navword');
+var snav_logobg = document.querySelector('#small_nav_logo');
+var sn_logo = document.querySelector('#sn_logo');
 
 snav_btn.onclick = function () {
       snav_word.classList.toggle('show');
+      snav_logobg.classList.toggle('show');
+      sn_logo.classList.toggle('show');
 };
 
 // 牽手
@@ -24,10 +28,52 @@ var dcenter = new Swiper('#date_center', {
             control: [dleft, dright],
       },
       navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.date_next',
+            prevEl: '.date_prev',
       },
 });
+// 結婚
+var wl = new Swiper('#wedding_left', {
+      direction: 'horizontal',
+      simulateTouch: false,
+      loop: true,
+      navigation: {
+            nextEl: '.wedding_next',
+            prevEl: '.wedding_prev',
+      },
+})
+
+var wc = new Swiper('#wedding_center', {
+      direction: 'horizontal',
+      simulateTouch: false,
+      loop: true,
+      navigation: {
+            nextEl: '.wedding_next',
+            prevEl: '.wedding_prev',
+      },
+})
+
+var wr = new Swiper('#wedding_right', {
+      direction: 'horizontal',
+      simulateTouch: false,
+      loop: true,
+      navigation: {
+            nextEl: '.wedding_next',
+            prevEl: '.wedding_prev',
+      },
+})
+
+var wall = new Swiper('#wedding_imgall', {
+      loop: true,
+      controller: {
+            control: [wl,wc,wr],
+      },
+      navigation: {
+            nextEl: '.wedding_next',
+            prevEl: '.wedding_prev',
+      },
+});
+
 
 // 親友
 var fleft = new Swiper('#family_left', {
@@ -47,8 +93,8 @@ var fcenter = new Swiper('#family_center', {
             control: [fleft, fright],
       },
       navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.family_next',
+            prevEl: '.family_prev',
       },
 });
 

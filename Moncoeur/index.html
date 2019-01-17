@@ -21,7 +21,7 @@
   <!-- 首頁動畫區塊 -->
   <section id="logo_anime" class="w-100 container-fluid">
     <div class="container w-100 h-100 d-flex justify-content-center align-items-center">
-      <div class="logo w-50 h-50"></div>
+      <div class="logo"></div>
     </div>
   </section>
 
@@ -74,6 +74,9 @@
       <div></div>
       <div></div>
       <div></div>
+    </div>
+    <div id="small_nav_logo" class="w-100 d-flex align-items-center justify-content-center">
+      <a id="sn_logo" href="#"></a>
     </div>
     <div id="small_navword" class="w-100">
       <div class="w-100 h-25 d-flex text-center align-items-center">
@@ -202,12 +205,12 @@
             <div id="img_a" class="swiper-slide"></div>
           </div>
         </div>
-        <div class="center_word position-absolute d-flex">
+        <!-- <div class="center_word position-absolute d-flex">
           <p id="date_number">&nbsp;</p>
           <p>/&nbsp;5</p>
-        </div>
-        <div class="swiper-button-prev position-absolute"></div>
-        <div class="swiper-button-next position-absolute"></div>
+        </div> -->
+        <div class="swiper-button-prev position-absolute date_prev"></div>
+        <div class="swiper-button-next position-absolute date_next"></div>
       </div>
       <div id="right" class="col-md-3 position-absolute position-relative">
         <div id="date_right" class="img_box w-100 swiper-container date_bs">
@@ -239,7 +242,86 @@
       <p id="title">給她許一個相戀的誓約</p>
       <p id="small_title">Give her a vow to fall in love</p>
     </div>
-    <div id="bottom" class="position-relative"></div>
+    <div id="bottom" class="position-relative d-flex">
+      <div id="leftbox" class="col-md-3 wedding_swiper d-flex position-absolute">
+        <div id="wleft" class="w-100 h-100">
+          <div id="wedding_left" class="swiper-container w-100 h-100">
+            <div class="swiper-wrapper w-100">
+              <div class="swiper-slide w-100 position-relative d-flex">
+                <p>#心之芳庭 ｜ 天空villa</p>
+                <div id="img_a"></div>
+              </div>
+              <div class="swiper-slide w-100 position-relative d-flex">
+                <p>#心之芳庭 ｜ 天空villa</p>
+                <div id="img_b"></div>
+              </div>
+              <div class="swiper-slide w-100 position-relative d-flex">
+                <p>#心之芳庭 ｜ 許諾禮堂</p>
+                <div id="img_c"></div>
+              </div>
+              <div class="swiper-slide w-100 position-relative d-flex">
+                <p>#心之芳庭 ｜ 祝福證婚庭</p>
+                <div id="img_d"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="centerbox" class="col-12 col-md-6 wedding_swiper d-flex position-absolute">
+        <div id="wcenter" class="w-100 h-100">
+          <div id="wedding_center" class="swiper-container w-100 h-100">
+            <div class="swiper-wrapper w-100">
+              <div class="swiper-slide w-100 position-relative d-flex">
+                <p>#心之芳庭 ｜ 天空villa</p>
+                <div id="img_b"></div>
+              </div>
+              <div class="swiper-slide w-100 position-relative d-flex">
+                <p>#心之芳庭 ｜ 許諾禮堂</p>
+                <div id="img_c"></div>
+              </div>
+              <div class="swiper-slide w-100 position-relative d-flex">
+                <p>#心之芳庭 ｜ 祝福證婚庭</p>
+                <div id="img_d"></div>
+              </div>
+              <div class="swiper-slide w-100 position-relative d-flex">
+                <p>#心之芳庭 ｜ 天空villa</p>
+                <div id="img_a"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="rightbox" class="col-md-3 wedding_swiper d-flex position-absolute">
+        <div id="wright" class="w-100 h-100">
+          <div id="wedding_right" class="swiper-container w-100 h-100">
+            <div class="swiper-wrapper w-100">
+              <div class="swiper-slide w-100 position-relative d-flex">
+                <p>#心之芳庭 ｜ 許諾禮堂</p>
+                <div id="img_c"></div>
+              </div>
+              <div class="swiper-slide w-100 position-relative d-flex">
+                <p>#心之芳庭 ｜ 祝福證婚庭</p>
+                <div id="img_d"></div>
+              </div>
+              <div class="swiper-slide w-100 position-relative d-flex">
+                <p>#心之芳庭 ｜ 天空villa</p>
+                <div id="img_a"></div>
+              </div>
+              <div class="swiper-slide w-100 position-relative d-flex">
+                <p>#心之芳庭 ｜ 天空villa</p>
+                <div id="img_b"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div id="wedding_imgall" class="w-100 h-100 position-absolute">
+      </div> -->
+    </div>
+    <div id="wedding_imgall" class="position-relative">
+        <div class="swiper-button-prev wedding_prev position-absolute"></div>
+        <div class="swiper-button-next wedding_next"></div>
+    </div>
   </section>
 
   <!-- 親友 -->
@@ -281,12 +363,12 @@
             <div id="img_a" class="swiper-slide"></div>
           </div>
         </div>
-        <div class="center_word position-absolute d-flex">
+        <!-- <div class="center_word position-absolute d-flex">
           <p id="date_number">&nbsp;</p>
           <p>/&nbsp;5</p>
-        </div>
-        <div class="swiper-button-prev position-absolute"></div>
-        <div class="swiper-button-next position-absolute"></div>
+        </div> -->
+        <div class="swiper-button-prev position-absolute family_prev"></div>
+        <div class="swiper-button-next position-absolute family_next"></div>
       </div>
       <div id="right" class="col-md-3 position-absolute position-relative">
         <div id="family_right" class="img_box w-100 swiper-container">

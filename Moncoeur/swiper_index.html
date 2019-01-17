@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+    <title>Document</title>
+    <style>
+        .slider-wrapper {
+            width: 100vw;
+        }
+
+        .slider-wrapper .swiper-slide img {
+            padding: 1rem;
+            width: 30vw;
+            height: 28vh;
+        }
+
+        .set-box {
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            z-index: 10;
+            animation: test 5s;
+        }
+
+        .set-box.slider-wrapper .swiper-slide img {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-wrapper">
+        <div class="swiper-container haha-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/400/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/420/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/410/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/400/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/420/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/410/?random" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-wrapper">
+        <div class="swiper-container image-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/400/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/420/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/410/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/400/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/420/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/410/?random" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-wrapper">
+        <div class="swiper-container quote-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/400/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/420/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/410/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/400/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/420/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/410/?random" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-wrapper set-box">
+        <div class="swiper-container set-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/400/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/420/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/410/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/400/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/420/?random" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://unsplash.it/300/410/?random" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+    <script>
+        var setSwiper = new Swiper('.set-slider', {
+            loop: true,
+            slidesPerView: 3,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+
+        var hahaSwiper = new Swiper('.haha-slider', {
+            loop: true,
+            slidesPerView: 3,
+            slidesOffsetBefore: 210,
+        });
+
+        var quoteSwiper = new Swiper('.quote-slider', {
+            loop: true,
+            slidesPerView: 3,
+            slidesOffsetBefore: 210,
+        });
+
+        var imageSwiper = new Swiper('.image-slider', {
+            loop: true,
+            slidesPerView: 3,
+        });
+        // hahaSwiper.controller.control = imageSwiper
+        imageSwiper.controller.control = hahaSwiper
+        quoteSwiper.controller.control = imageSwiper
+        setSwiper.controller.control = quoteSwiper
+
+        // imageSwiper.controller.control = quoteSwiper
+        // quoteSwiper.controller.control = imageSwiper
+        // quoteSwiper.on('slideChange', function () {
+        //     imageSwiper.slideToLoop(quoteSwiper.realIndex,300);
+        // });
+        // imageSwiper.on('slideChange', function () {
+        //     hahaSwiper.slideToLoop(imageSwiper.realIndex,300);
+        // });
+        // hahaSwiper.on('slideChange', function () {
+        //     quoteSwiper.slideToLoop(hahaSwiper.realIndex,300);
+        // });
+
+        setQuoteSwiperOffset()
+
+        window.onresize = function () {
+            setQuoteSwiperOffset()
+        }
+
+        function setQuoteSwiperOffset() {
+            quoteSwiper.params.slidesOffsetBefore = innerWidth / 2
+        }
+        console.log(hahaSwiper);
+
+    </script>
+</body>
+
+</html>
