@@ -166,7 +166,7 @@ p, small, hr{
 
 #three_section #left{
     background-image: url("/Moncoeur/img/date.jpg");
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -180,8 +180,8 @@ p, small, hr{
 
 #three_section #right{
     background-image: url("/Moncoeur/img/family.jpg");
-    background-size: 100% 100%;
-    background-position: center;
+    background-size: cover;
+    background-position: 65% 25%;
     background-repeat: no-repeat;
 }
 
@@ -450,7 +450,7 @@ p, small, hr{
 #wedding .swiper-button-prev{
     width: 7.5em;
     top: 0;
-    left:30%;
+    left:35%;
     transform: translateY(-50%);
     background-image: url('/Moncoeur/img/left_button.png');
     background-size: 50% 50%;
@@ -461,7 +461,7 @@ p, small, hr{
 #wedding .swiper-button-next{
     width: 7.5em;
     top: 0;
-    right: 30%;
+    right: 35%;
     transform: translateY(-50%);
     background-image: url('/Moncoeur/img/right_button.png');
     background-size: 50% 50%;
@@ -957,6 +957,14 @@ p, small, hr{
     #three_section #center{
         background-size: 400%;
     }
+
+    #wedding .swiper-button-prev{
+        left:30%;
+    }
+    
+    #wedding .swiper-button-next{
+        right: 30%;
+    }
 }
 
 /* 寬度小於950px */
@@ -1205,7 +1213,7 @@ p, small, hr{
 
     /* date */
     #date{
-        height: 100vh;
+        height: 0;
         min-height: 35em;
     }
     
@@ -1246,7 +1254,7 @@ p, small, hr{
 
     /* wedding */
     #wedding{
-        height: 100vh;
+        height: 0;
         min-height: 35em;
     }
 
@@ -1278,7 +1286,7 @@ p, small, hr{
 
     /* famaily */
     #family{
-        height: 100vh;
+        height: 0;
         min-height: 35em;
     }
 
