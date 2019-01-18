@@ -1050,11 +1050,11 @@ p, small, hr{
     }
 
     #small_nav p{
-        font-size: 1.75em;
+        font-size: 1.25em;
     }
 
     #small_nav small{
-        font-size: 1.25em;
+        font-size: 1em;
     }
 
     /* three */
@@ -1079,8 +1079,8 @@ p, small, hr{
 
     /* news */
     #news{
-        height: 100vh;
-        min-height: 35em;
+        height: 90vh;
+        min-height: 43em;
     }
 
     #news #top_section, #news #bg_color{
@@ -1206,7 +1206,7 @@ p, small, hr{
     /* date */
     #date{
         height: 100vh;
-        min-height: 43em;
+        min-height: 35em;
     }
     
     #date #top{
@@ -1232,10 +1232,22 @@ p, small, hr{
         display: none;
     }
 
+    #date #center .img_box {
+        height: 20em;
+    }
+
+    #date .swiper-button-prev {
+        top: 25em;
+    }
+
+    #date .swiper-button-next {
+        top: 25em;
+    }
+
     /* wedding */
     #wedding{
         height: 100vh;
-        min-height: 43em;
+        min-height: 35em;
     }
 
     #wedding #top{
@@ -1267,7 +1279,7 @@ p, small, hr{
     /* famaily */
     #family{
         height: 100vh;
-        min-height: 42em;
+        min-height: 35em;
     }
 
     #family #top{
@@ -1291,6 +1303,18 @@ p, small, hr{
 
     #family #left, #family #right{
         display: none;
+    }
+
+    #family #center .img_box {
+        height: 20em;
+    }
+
+    #family .swiper-button-prev {
+        top: 25em;
+    }
+
+    #family .swiper-button-next {
+        top: 25em;
     }
 
     /* ig */
