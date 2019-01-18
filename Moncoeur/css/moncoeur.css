@@ -1079,8 +1079,8 @@ p, small, hr{
 
     /* news */
     #news{
-        height: 0;
-        min-height: 46.5em;
+        height: 100vh;
+        min-height: 35em;
     }
 
     #news #top_section, #news #bg_color{
@@ -1107,8 +1107,7 @@ p, small, hr{
         height: 5em;
         border-radius: 25px;
         background-color: #542569;
-        margin-top: 1vh;
-        margin-bottom: 1vh;
+        margin-bottom: 3vh;
     }
 
     #small_news .small_box p{
@@ -1157,6 +1156,7 @@ p, small, hr{
     /* restaurant */
     #restaurant{
         height: 100vh;
+        min-height: 30em;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -1204,13 +1204,18 @@ p, small, hr{
     }
 
     /* date */
+    #date{
+        height: 100vh;
+        min-height: 43em;
+    }
+    
     #date #top{
         height: 0;
         display: none;
     }
 
     #date #title {
-        padding-top: 0;
+        padding-top: 0em;
     }
 
     #date #center{
@@ -1220,7 +1225,7 @@ p, small, hr{
 
     #date #small_top{
         visibility: visible;
-        height: 25%;
+        height: 20%;
     }
 
     #date #left, #date #right{
@@ -1228,6 +1233,11 @@ p, small, hr{
     }
 
     /* wedding */
+    #wedding{
+        height: 100vh;
+        min-height: 43em;
+    }
+
     #wedding #top{
         height: 0;
         display: none;
@@ -1255,6 +1265,11 @@ p, small, hr{
     }
 
     /* famaily */
+    #family{
+        height: 100vh;
+        min-height: 42em;
+    }
+
     #family #top{
         height: 0;
         display: none;
@@ -1271,7 +1286,7 @@ p, small, hr{
 
     #family #small_top{
         visibility: visible;
-        height: 25%;
+        height: 20%;
     }
 
     #family #left, #family #right{
