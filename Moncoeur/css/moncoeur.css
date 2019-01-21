@@ -7,13 +7,13 @@ p, small, hr{
 }
 
 #title{
-    font-size: 2em;
+    font-size: 1.5em;
     letter-spacing: 5px;
 }
 
 #small_title{
     color: rgba(71, 39,102, 0.7);
-    font-size: 1.2em;
+    font-size: 1em;
     letter-spacing: 5px;
 }
 
@@ -93,7 +93,7 @@ p, small, hr{
 
 #nav .nav_word{
     color: #4E4B4B;
-    font-size: 1.25em;
+    font-size: 1em;
     line-height: 1em;
     padding-top: 1.25vh;
     padding-bottom: 1.25vh;
@@ -149,7 +149,6 @@ p, small, hr{
 /* 三大區塊 */
 #three_section{
     height: 90vh;
-    min-height: 50em;
 }
 
 #three_section .overlay_box{
@@ -212,7 +211,6 @@ p, small, hr{
 /* 牽起他的手 */
 #date{
     height: 90vh;
-    min-height: 50em;
 }
 
 #date p{
@@ -229,7 +227,7 @@ p, small, hr{
 }
 
 #date #title{
-    padding-top: 1.75em;
+    padding-top: 3em;
 }
 
 #date #bottom{
@@ -360,7 +358,6 @@ p, small, hr{
 /* 結婚 */
 #wedding{
     height: 90vh;
-    min-height: 50em;
     background-image: url("/Moncoeur/img/bg_img.png");
     background-size: cover;
     background-position: center;
@@ -374,6 +371,10 @@ p, small, hr{
 #wedding #small_top{
     visibility: hidden;
     height: 0;
+}
+
+#wedding #title{
+    padding-top: 2.5em;
 }
 
 #wedding .wedding_swiper{
@@ -476,7 +477,6 @@ p, small, hr{
 /* 親友 */
 #family{
     height: 90vh;
-    min-height: 50em;
 }
 
 #family p{
@@ -493,7 +493,7 @@ p, small, hr{
 }
 
 #family #title{
-    padding-top: 1.75em;
+    padding-top: 3em;
 }
 
 #family #bottom{
@@ -620,7 +620,7 @@ p, small, hr{
 /* 消息 */
 #news{
     height: 90vh;
-    min-height: 50em;
+    /* min-height: 50em; */
     background-image: url("/Moncoeur/img/bg_img.png");
     background-size: cover;
     background-position: center;
@@ -748,7 +748,6 @@ p, small, hr{
 /* 餐桌 */
 #restaurant{
     height: 90vh;
-    min-height: 50em;
     padding-left: 0;
     padding-right: 0;
 }
@@ -802,14 +801,13 @@ p, small, hr{
 
 #ig #ig_box{
     height: 90vh;
-    min-height: 25em;
 }
 
 #ig #ig_box:hover{
     height: 90vh;
     background-color: rgba(71, 39,102, 0.5);
     background-image: url("/Moncoeur/img/ig_hover.png");
-    background-size: 32em 32em;
+    background-size: 25em 25em;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -952,7 +950,8 @@ p, small, hr{
     font-family: Helvetica, Arial, "Microsoft YaHei", STHeitiSC-Light, simsun, "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", sans-serif;
 }
 
-/* 寬度小於1200px、高度900px */
+/* 寬度 */
+/* 寬度小於1200px */
 @media (max-width:1200px){
     #three_section #center{
         background-size: 400%;
@@ -970,12 +969,13 @@ p, small, hr{
 /* 寬度小於950px */
 @media (max-width:950px){
     #title{
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
     
     #small_title{
-        font-size: 1em;
+        font-size: .75em;
     }
+
     /* nav */
     #nav{
         height: 0;
@@ -1070,27 +1070,6 @@ p, small, hr{
         display: none;
     }
 
-    /* date */
-    #date{
-        height: 100vh;
-    }
-
-    /* wedding */
-    #wedding{
-        height: 100vh;
-    }
-
-    /* family */
-    #family{
-        height: 100vh;
-    }
-
-    /* news */
-    #news{
-        height: 90vh;
-        min-height: 43em;
-    }
-
     #news #top_section, #news #bg_color{
         visibility: hidden;
     }
@@ -1163,8 +1142,6 @@ p, small, hr{
 
     /* restaurant */
     #restaurant{
-        height: 100vh;
-        min-height: 30em;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -1175,7 +1152,7 @@ p, small, hr{
     }
 
     #restaurant #bottom .hover:hover{
-        background-size: 14em 75%;
+        background-size: 14em 14em;
     }
     
     #restaurant #restaurant_left{
@@ -1196,14 +1173,6 @@ p, small, hr{
 
 /* 螢幕寬度小於768px */
 @media (max-width:768px){
-    #title{
-        font-size: 1.25em;
-    }
-    
-    #small_title{
-        font-size: .75em;
-    }
-
     /* banner */
     #banner video{
         width: 100%;
@@ -1214,7 +1183,6 @@ p, small, hr{
     /* date */
     #date{
         height: 0;
-        min-height: 35em;
     }
     
     #date #top{
@@ -1255,7 +1223,6 @@ p, small, hr{
     /* wedding */
     #wedding{
         height: 0;
-        min-height: 35em;
     }
 
     #wedding #top{
@@ -1328,7 +1295,6 @@ p, small, hr{
     /* ig */
     #ig #ig_box{
         height: 50vh;
-        min-height: 23em;
     }
 
     #ig #ig_box:hover{
@@ -1385,7 +1351,8 @@ p, small, hr{
 
     /* date */
     #date{
-        height: 65vh;
+        height: 65vh!important;
+        min-height: 35em!important;
     }
 
     #date #center #img_b{
@@ -1394,7 +1361,8 @@ p, small, hr{
 
     /* wedding */
     #wedding{
-        height: 65vh;
+        height: 65vh!important;
+        min-height: 35em!important;
     }
 
     #wedding .swiper-button-prev{
@@ -1423,7 +1391,8 @@ p, small, hr{
 
     /* family */
     #family{
-        height: 65vh;
+        height: 65vh!important;
+        min-height: 35em!important;
     }
 
     #family #center #img_b{
@@ -1436,5 +1405,57 @@ p, small, hr{
 
     #family #center #img_e{
         background-position: 65% 65%;
+    }
+    
+    /* restaurant */
+    #restaurant{
+        height: 65vh!important;
+        min-height: 40em!important;
+    }
+
+    /* ig */
+    #ig #ig_box {
+        height: 30vh;
+        min-height: 30em!important;
+    }
+}
+
+/* 高度 */
+/* 高度低於1366px-平板 */
+@media (max-height:1366px){
+    #three_section, #date, #family, #news, #restaurant{
+        height: 75vh;
+    }
+
+    #restaurant #restaurant_left{
+        background-size: 150%;
+        background-position: 100%;
+    }
+}
+
+/* 高度等於、低於1080px */
+@media (max-height:1080px){
+    #three_section, #date, #family, #news, #restaurant{
+        height: 90vh;
+    }
+
+    #restaurant #restaurant_left{
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/* 當高度低於900px */
+@media (max-height:900px){
+    #three_section, #date, #family, #news, #restaurant{
+        min-height: 47em;
+    }
+
+    #wedding{
+        min-height: 50em;
+    }
+
+    #ig_box{
+        min-height: 45em;
     }
 }
