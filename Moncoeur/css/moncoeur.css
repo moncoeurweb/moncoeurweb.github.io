@@ -1033,7 +1033,7 @@ p, small, hr{
         height: 50px;
         border: 2px solid #542569;
         border-radius: 9999999px;
-        bottom: 3em;
+        bottom: 5em;
         position: relative;
         animation: bottom_go 5s;
     }
@@ -1062,7 +1062,7 @@ p, small, hr{
     #logo_anime .scroll_down{
         display: block;
         position: absolute;
-        bottom: 7em;
+        bottom: 8.5em;
         color: #542569;
         font-weight: 700;
         animation: scroll_down 5s;
@@ -1265,7 +1265,11 @@ p, small, hr{
 
     #date #small_top{
         visibility: visible;
-        height: 20%;
+        height: 30%;
+    }
+
+    #date #bottom {
+        height: 60%;
     }
 
     #date #left, #date #right{
@@ -1277,11 +1281,11 @@ p, small, hr{
     }
 
     #date .swiper-button-prev {
-        top: 25em;
+        top: 22.5em;
     }
 
     #date .swiper-button-next {
-        top: 25em;
+        top: 22.5em;
     }
 
     /* wedding */
@@ -1337,7 +1341,11 @@ p, small, hr{
 
     #family #small_top{
         visibility: visible;
-        height: 20%;
+        height: 30%;
+    }
+
+    #family #bottom {
+        height: 60%;
     }
 
     #family #left, #family #right{
@@ -1349,11 +1357,11 @@ p, small, hr{
     }
 
     #family .swiper-button-prev {
-        top: 25em;
+        top: 22.5em;
     }
 
     #family .swiper-button-next {
-        top: 25em;
+        top: 22.5em;
     }
 
     /* restaurant */
@@ -1544,14 +1552,11 @@ p, small, hr{
         background-position: 65% 65%;
     }
 
-    /* restaurant */
-    /* #restaurant #bottom .hover{
-        background-size: 7em 7em;
+    /* ig */
+    #ig #ig_box{
+        height: 35vh;
+        min-height: 25em;
     }
-
-    #restaurant #bottom .hover:hover{
-        background-size: 7em 7em;
-    } */
 }
 
 /* 高度 */
