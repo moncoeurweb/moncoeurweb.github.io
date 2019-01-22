@@ -72,36 +72,60 @@ $('#sn_logo').click(function () {
       $('html,body').animate({
             scrollTop: ($('body').offset().top)
       }, 1000);
+
+      snav_word.classList.remove('show');
+      snav_logobg.classList.remove('show');
+      sn_logo.classList.remove('show');
 });
 
 $('#sn_godate').click(function () {
       $('html,body').animate({
             scrollTop: ($('#date').offset().top)
       }, 1000);
+
+      snav_word.classList.remove('show');
+      snav_logobg.classList.remove('show');
+      sn_logo.classList.remove('show');
 });
 
 $('#sn_gonews').click(function () {
       $('html,body').animate({
             scrollTop: ($('#news').offset().top)
       }, 1000);
+
+      snav_word.classList.remove('show');
+      snav_logobg.classList.remove('show');
+      sn_logo.classList.remove('show');
 });
 
 $('#sn_gotable').click(function () {
       $('html,body').animate({
             scrollTop: ($('#restaurant').offset().top)
       }, 1000);
+
+      snav_word.classList.remove('show');
+      snav_logobg.classList.remove('show');
+      sn_logo.classList.remove('show');
 });
 
 $('#sn_goig').click(function () {
       $('html,body').animate({
             scrollTop: ($('#ig').offset().top)
       }, 1000);
+
+      snav_word.classList.remove('show');
+      snav_logobg.classList.remove('show');
+      sn_logo.classList.remove('show');
 });
 
 $('.sn_go').click(function () {
       $('html,body').animate({
             scrollTop: ($('body').offset().top)
       }, 1000);
+
+      snav_word.classList.remove('show');
+      snav_logobg.classList.remove('show');
+      sn_logo.classList.remove('show');
 });
 
 
@@ -144,6 +168,7 @@ var dcenter = new Swiper('#date_center', {
 var wl = new Swiper('#wedding_left', {
       direction: 'horizontal',
       simulateTouch: false,
+      spaceBetween: 100,
       loop: true,
       navigation: {
             nextEl: '.wedding_next',
@@ -154,6 +179,7 @@ var wl = new Swiper('#wedding_left', {
 var wc = new Swiper('#wedding_center', {
       direction: 'horizontal',
       simulateTouch: false,
+      spaceBetween: 100,
       loop: true,
       navigation: {
             nextEl: '.wedding_next',
@@ -164,6 +190,7 @@ var wc = new Swiper('#wedding_center', {
 var wr = new Swiper('#wedding_right', {
       direction: 'horizontal',
       simulateTouch: false,
+      spaceBetween: 100,
       loop: true,
       navigation: {
             nextEl: '.wedding_next',
